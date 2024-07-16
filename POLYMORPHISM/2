@@ -1,0 +1,30 @@
+import java.util.*;
+
+class employee {
+    public void salary() {
+        System.out.println("salary");
+    }
+}
+
+class manager extends employee {
+    public void salary(int r) {
+        System.out.println("manager salary="+r);
+    }
+}
+
+class programmer extends employee {
+    public void salary(int h) {
+        System.out.println("programmer salary="+h ); 
+    }
+}
+
+
+public class main {
+    public static void main(String[] args) {
+        manager c1 = new manager();
+        c1.salary(5000000);
+
+        programmer r1 = new programmer();
+        r1.salary(1000000);
+}
+}
