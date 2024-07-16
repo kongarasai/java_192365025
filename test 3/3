@@ -1,0 +1,56 @@
+class library{
+    public void getitemdetails() {
+        System.out.println("library management system");
+    }
+}
+
+class book extends library {
+    public void getitemdetails(String s, String b) {
+        
+        System.out.println("book name = " + s);
+        System.out.println("price = " + b);
+        
+    }
+}
+
+class magazine extends library {
+    public void getitemdetails(String s, String b) {
+       
+        System.out.println("magazine name = " + s);
+        System.out.println("price = " + b);
+         
+    }
+}
+class dvd extends library {
+    public void getitemdetails(String s, String b) {
+       
+        
+        System.out.println("dvd name = " + s);
+        System.out.println("price = " + b);
+        
+    }
+}
+
+public class Main {
+    public static void main(String[] args) {
+        library e1 = new library();
+        e1.getitemdetails();
+
+        book m1 = new book();
+        m1.getitemdetails("luffy","oda");
+
+        dvd d1 = new dvd();
+        d1.getitemdetails("luffy","oda");
+        
+        magazine b1 = new magazine();
+        b1.getitemdetails("luffy","oda");
+    }
+}
+output:
+library management system
+book name = luffy
+price = oda
+dvd name = luffy
+price = oda
+magazine name = luffy
+price = oda
