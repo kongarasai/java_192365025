@@ -1,0 +1,57 @@
+class calculator{
+    public void calculate() {
+        System.out.println("calculator");
+    }
+}
+
+class ScientificCalculator extends calculator {
+    public void calculate(int s, int b) {
+      int  su=s-b;
+         int a=s+b;
+        int m=s*b;
+         double d=s/b;
+        System.out.println("subtraction = " + su);
+        System.out.println("addition = " + a);
+         System.out.println("multiplication = " + m);
+        System.out.println("division = " + d);
+        
+    }
+}
+
+class FinancialCalculator extends calculator {
+    public void calculate(int s, int b) {
+       int  su=s-b;
+         int a=s+b;
+        int m=s*b;
+         double d=s/b;
+        System.out.println("subtraction = " + su);
+        System.out.println("addition = " + a);
+         System.out.println("multiplication = " + m);
+        System.out.println("division = " + d);
+    }
+}
+ 
+public class Main {
+    public static void main(String[] args) {
+        calculator e1 = new calculator();
+        e1.calculate();
+
+        ScientificCalculator m1 = new ScientificCalculator();
+        m1.calculate(2,3);
+
+        FinancialCalculator d1 = new FinancialCalculator();
+        d1.calculate(5,7);
+        
+        
+    }
+}
+output:
+calculator
+subtraction = -1
+addition = 5
+multiplication = 6
+division = 0.0
+subtraction = -2
+addition = 12
+multiplication = 35
+division = 0.0
