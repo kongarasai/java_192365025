@@ -1,0 +1,57 @@
+class product{
+    public void getitemdetails() {
+        System.out.println("shop management system");
+    }
+}
+
+class electronics extends product {
+    public void getitemdetails(String s, int b) {
+        
+        System.out.println("electronic name = " + s);
+        System.out.println("price = " + b);
+        
+    }
+}
+
+class clothing extends product {
+    public void getitemdetails(String s, int b) {
+       
+        System.out.println("clothing name = " + s);
+        System.out.println("price = " + b);
+         
+    }
+}
+class grocery extends product {
+    public void getitemdetails(String s, int b) {
+       
+        
+        System.out.println("grocery name = " + s);
+        System.out.println("price = " + b);
+        
+    }
+}
+
+public class Main {
+    public static void main(String[] args) {
+        product e1 = new product();
+        e1.getitemdetails();
+
+        electronics m1 = new electronics();
+        m1.getitemdetails("mobile",300);
+
+        clothing d1 = new clothing();
+        d1.getitemdetails("shirt",200);
+        
+        grocery b1 = new grocery();
+        b1.getitemdetails("rice",500);
+    }
+}
+  output: 
+  shop management system
+electronic name = mobile
+price = 300
+clothing name = shirt
+price = 200
+grocery name = rice
+price = 500
+
