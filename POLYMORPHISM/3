@@ -1,0 +1,53 @@
+import java.util.*;
+
+class Shape {
+    public void area() {
+        System.out.println("Shape has area");
+    }
+}
+
+class Circle extends Shape {
+    public double area(int r) {
+        return 3.14 * r * r;
+    }
+
+    public double perimeter(int r) {
+        return 3.14 * 2 * r;
+    }
+}
+
+class Rectangle extends Shape {
+    public int area(int h, int w) {
+        return h * w;
+    }
+
+    public int perimeter(int l, int b) {
+        return 2 * (l + b);
+    }
+}
+
+class Triangle extends Shape {
+    public double area(int l, int b) {
+        return 0.5 * l * b;
+    }
+
+    public int perimeter(int a, int b, int c) {
+        return a + b + c;
+    }
+}
+
+public class Main {
+    public static void main(String[] args) {
+        Circle c1 = new Circle();
+        System.out.println("Circle Area: " + c1.area(2));
+        System.out.println("Circle Perimeter: " + c1.perimeter(2));
+
+        Rectangle r1 = new Rectangle();
+        System.out.println("Rectangle Area: " + r1.area(2, 3));
+        System.out.println("Rectangle Perimeter: " + r1.perimeter(2, 3));
+
+        Triangle t1 = new Triangle();
+        System.out.println("Triangle Area: " + t1.area(2, 3));
+        System.out.println("Triangle Perimeter: " + t1.perimeter(2, 3, 4));
+    }
+}
