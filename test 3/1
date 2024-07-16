@@ -1,0 +1,44 @@
+class Employee {
+    public void getsalary() {
+        System.out.println("Salary of staff");
+    }
+}
+
+class Manager extends Employee {
+    public void getsalary(int s, int b) {
+        int c = s + b;
+        System.out.println("Manager salary = " + s);
+        System.out.println("Manager bonus = " + b);
+        System.out.println("Manager final salary = " + c);
+    }
+}
+
+class Developer extends Employee {
+    public void getsalary(int s, int b) {
+        int c = s + b;
+        System.out.println("Developer salary = " + s);
+        System.out.println("Developer bonus = " + b);
+        System.out.println("Developer final salary = " + c);
+    }
+}
+
+public class Main {
+    public static void main(String[] args) {
+        Employee e1 = new Employee();
+        e1.getsalary();
+
+        Manager m1 = new Manager();
+        m1.getsalary(1000, 300);
+
+        Developer d1 = new Developer();
+        d1.getsalary(30000, 200);
+    }
+}
+output:
+Salary of staff
+Manager salary = 1000
+Manager bonus = 300
+Manager final salary = 1300
+Developer salary = 30000
+Developer bonus = 200
+Developer final salary = 30200
