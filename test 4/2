@@ -1,0 +1,33 @@
+2. Create a base class called Animal with a virtual function speak(). Derive two classes Cat and
+Dog from the base class. Implement the speak() function for each class.
+
+
+
+class animal{
+    void speak(){
+        System.out.println("speaking");
+    }
+}
+class cat extends animal{
+    void speak(){
+        System.out.println("mew mew");
+    }
+}
+class dog extends animal{
+    void speak(){
+        System.out.println(" bow bow" );
+    }
+}
+public class main{
+    public static void main(String[] args ){
+        animal s1=new animal();
+        s1.speak();
+        
+        cat r1=new cat();
+        r1.speak();
+        
+        dog c1=new dog();
+        c1.speak();
+        
+    }
+}
