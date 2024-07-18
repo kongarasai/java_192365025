@@ -1,0 +1,45 @@
+3. Create a base class called Employee with a virtual function calculatePay(). Derive two classes
+Manager and Engineer from the base class. Implement the calculatePay() function for each class.
+
+
+
+class employe{
+    void calculatepay(){
+        System.out.println("salary");
+    }
+}
+class manager extends employe{
+    void calculatepay(int s,int b,int c,int d){
+        System.out.println("salary ="+s);
+        System.out.println("bonus="+b);
+        System.out.println("cuttings="+c);
+        System.out.println("deposit="+d);
+           int f=s+b-c-d;
+        System.out.println("final salary of manager="+f);
+        
+    }
+}
+class engineer extends employe{
+   void calculatepay(int s,int b,int c,int d){
+        System.out.println("salary ="+s);
+        System.out.println("bonus="+b);
+        System.out.println("cuttings="+c);
+        System.out.println("deposit="+d);
+        int f=s+b-c-d;
+        System.out.println("final salary of engineer="+f);
+        
+    }
+}
+public class main{
+    public static void main(String[] args ){
+        employe s1=new employe();
+        s1.calculatepay();
+        
+        manager r1=new manager();
+        r1.calculatepay(1000,300,500,300);
+        
+        engineer c1=new engineer();
+        c1.calculatepay(2000,300,700,500);
+        
+    }
+}
