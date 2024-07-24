@@ -1,0 +1,73 @@
+import java.util.Scanner;
+
+class Bank {
+    void bankDetails() {
+        System.out.println("Bank details");
+    }
+}
+
+class Create extends Bank {
+    void createAccount(String accountHolderName, double initialDeposit) {
+        System.out.println("Account Holder Name = " + accountHolderName);
+        System.out.println("Initial Deposit = " + initialDeposit);
+    }
+}
+
+class Deposit extends Bank {
+    void depositMoney(String accountNumber, double amount) {
+        System.out.println("Account Number = " + accountNumber);
+        System.out.println("Amount Deposited = " + amount);
+    }
+}
+
+class Withdraw extends Bank {
+    void withdrawMoney(String accountNumber, double amount) {
+        System.out.println("Account Number = " + accountNumber);
+        System.out.println("Amount Withdrawn = " + amount);
+    }
+}
+
+class Check extends Bank {
+    void checkBalance(String accountNumber) {
+        System.out.println("Account Number = " + accountNumber);
+    }
+}
+
+public class Main {
+    public static void main(String[] args) {
+        Scanner input = new Scanner(System.in);
+        Bank s1 = new Bank();
+        s1.bankDetails();
+
+        System.out.println("Enter account holder name:");
+        String a = input.nextLine();
+        System.out.println("Enter initial amount:");
+        double i = input.nextDouble();
+        input.nextLine(); // Consume newline
+
+        Create r1 = new Create();
+        r1.createAccount(a, i);
+
+        System.out.println("Enter account number:");
+        String n = input.nextLine();
+        System.out.println("Enter amount to withdraw:");
+        double w = input.nextDouble();
+        input.nextLine(); // Consume newline
+
+        Withdraw c1 = new Withdraw();
+        c1.withdrawMoney(n, w);
+
+        System.out.println("Enter amount to deposit:");
+        double d = input.nextDouble();
+        input.nextLine(); // Consume newline
+
+        Deposit w1 = new Deposit();
+        w1.depositMoney(n, d);
+
+        Check k1 = new Check();
+        k1.checkBalance(n);
+
+        double b=i+d-w;
+        System.out.print("balance="+b);
+    }
+}
