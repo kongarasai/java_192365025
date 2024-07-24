@@ -43,7 +43,7 @@ public class Main {
         String a = input.nextLine();
         System.out.println("Enter initial amount:");
         double i = input.nextDouble();
-        input.nextLine(); // Consume newline
+        input.nextLine(); 
 
         Create r1 = new Create();
         r1.createAccount(a, i);
@@ -52,14 +52,14 @@ public class Main {
         String n = input.nextLine();
         System.out.println("Enter amount to withdraw:");
         double w = input.nextDouble();
-        input.nextLine(); // Consume newline
+        input.nextLine(); 
 
         Withdraw c1 = new Withdraw();
         c1.withdrawMoney(n, w);
 
         System.out.println("Enter amount to deposit:");
         double d = input.nextDouble();
-        input.nextLine(); // Consume newline
+        input.nextLine(); 
 
         Deposit w1 = new Deposit();
         w1.depositMoney(n, d);
@@ -67,7 +67,7 @@ public class Main {
         Check k1 = new Check();
         k1.checkBalance(n);
 
-        double b=i+d-w;
-        System.out.print("balance="+b);
+        double b = i + d - w;
+        System.out.println("Balance = " + b);
     }
 }
